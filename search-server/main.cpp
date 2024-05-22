@@ -120,8 +120,8 @@ private:
         return query;
     }
 
-    double Idf() {
-        return double idf = log (static_cast <double> (document_count_) / word_to_document_freqs_.at(pl).size());
+    double Idf() const {
+        return log (static_cast <double> (document_count_) / word_to_document_freqs_.at(pl).size());
     }    
 
     vector<Document> FindAllDocuments(const Query& query_words) const {
